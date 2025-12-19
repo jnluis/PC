@@ -40,133 +40,118 @@
     \newpage}
 
 \newacronym{uc}{UC}{Unidade Curricular}
+\newacronym{nis2}{NIS2}{Network and Information Security Directive 2}
+\newacronym{grc}{GRC}{Governance, Risk and Compliance}
+\newacronym{smd}{SMD}{Selo de Maturidade Digital}
+\newacronym{rgpd}{RGPD}{Regulamento Geral de Proteção de Dados}
 
 \begin{document}
 
 \pagenumbering{arabic}
 
-\section*{\centering{\Large{Opção A - Em que \textit{Phishing} cairia eu?}}}
+\section*{\centering{\Large{Se você conhece o inimigo e a si mesmo, não precisa temer o resultado de cem batalhas}}}
 
-Neste trabalho pretende-se refletir um pouco sobre como é que alguém da área de TI, mais especificamente de cibersegurança, poderia ser vítima de um ataque de \textit{phishing}.
+Neste trabalho pretende-se refletir sobre uma área na qual pretendo vir a especializar-me, o que é que fiz ou planeio fazer para alcançar esse \textit{expertise} na matéria em questão, qual a metodologia que penso usar para lá chegar e provas/evidências que mostrem o progresso feito nesse tema.
 
-Apesar de profissionais e estudantes de TI terem, em média, maior consciencialização em cibersegurança, vários estudos demonstram que nenhum grupo está completamente imune a este ataque de engenharia social, sobretudo quando estes são altamente personalizados ou contextualizados.
+A área em que me pretendo especializar é na \acrfull{nis2}, que surge como um dos pilares fundamentais da estratégia europeia de cibersegurança, impondo novos requisitos legais, técnicos e organizacionais às entidades públicas e privadas e que muito recentemente, no dia quatro de dezembro, foi transposta para a legislação nacional através do Decreto-Lei nº125/2025. Assim, através da especialização na NIS2, desenvolverei também muito conhecimento numa das grandes áreas de Ciberseguranças que é \acrfull{grc}, ao combinar conhecimento técnico, enquadramento legal e responsabilidade organizacional.
 
-Um estudo conduzido por Daengsi et al. (2021) \cite{daengsi2021} analisou o impacto da consciencialização em cibersegurança através de simulações de phishing numa organização financeira. Os autores compararam funcionários de departamentos técnicos (como TI) com departamentos de natureza social (como Recursos Humanos e Jurídico). Os resultados mostraram que, embora os colaboradores de TI apresentassem inicialmente maior capacidade de deteção de phishing, ambos os grupos eram vulneráveis. Após ações de formação e simulações, verificou-se uma melhoria significativa nos dois grupos, especialmente nos colaboradores não técnicos. Este estudo evidencia que a formação contínua e a exposição a cenários realistas são fundamentais para reduzir o sucesso de ataques de phishing, independentemente do perfil técnico do utilizador.
+\subsection*{A Diretiva NIS2: breve contextualização histórica e evolução}
 
-De forma complementar, Meyers et al. (2018) \cite{meyers2018} estudaram a formação de estudantes de cibersegurança na criação de ataques de \textit{spear phishing} através de um processo estruturado denominado SiEVE (Social Engineering Vulnerability Evaluation). O estudo demonstrou que alunos que seguiram este processo conseguiram criar emails de \textit{spear phishing} mais convincentes e eficazes. Estes resultados mostram que ataques bem-sucedidos dependem fortemente do contexto e da personalização da mensagem, reforçando a ideia de que utilizadores, mesmo com formação técnica, podem ser enganados quando confrontados com mensagens altamente credíveis.
+A Diretiva NIS2 resulta da revisão da primeira Diretiva NIS, adotada em 2016, que constituiu o primeiro esforço legislativo europeu para estabelecer um nível comum de segurança das redes e sistemas de informação. Contudo, a rápida evolução das ameaças, o aumento da digitalização e a experiência adquirida com incidentes de grande impacto demonstraram que o regime anterior era insuficiente, tanto em termos de âmbito como de exigência.
 
-Em conjunto, estes trabalhos reforçam a importância da consciencialização contínua em cibersegurança e demonstram que o \textit{phishing}, especialmente o \textit{spear phishing}, continua a ser uma ameaça relevante e eficaz.
+Como resposta, a União Europeia atualizou a Diretiva para NIS2, com o objetivo de reforçar a resiliência cibernética, harmonizar requisitos entre Estados-Membros e assegurar uma maior responsabilização das organizações e das suas estruturas de gestão.
 
+\clearpage
 
-Antes de elaborar em que tipos de \textit{phishing} que poderia cair, convidava o professor a fazer um pequeno \textit{quiz} para testar as suas capacidades, disponível em \href{https://phishingquiz.withgoogle.com/}{https://phishingquiz.withgoogle.com/}. Eu obtive o seguinte resultado: 
+\subsection*{O que é a NIS2 e o que exige}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\linewidth]{images/phishing.png}
-	\caption{Resultados do questionário de phishing}
-	\label{fig:phishing}
-\end{figure}
-
-Como é possível ver, não acertei em todas as perguntas devido a um dos aspetos mais importantes no phishing na minha visão: \textbf{o contexto}, já que em ambas as perguntas erradas é importante perceber se de facto existia algum processo de compra/encomenda em curso. 
-
-No entanto, com base neste questionário, é possível identificar algumas técnicas comuns utilizadas por atacantes de \textit{phishing}:
+A NIS2 estabelece um quadro legal abrangente para a cibersegurança, com foco em três grandes pilares:
 
 \begin{itemize}
-	\item Uso de domínios muito semelhantes aos legítimos, com pequenas alterações (ex:substituição de caracteres);
-	\item Criação de um sentido de urgência ou escassez de tempo para incentivar uma ação imediata;
-	\item Exploração de temas relevantes para o utilizador, como atualizações de \textit{software} ou problemas de armazenamento.
+	\item \textbf{Gestão de Risco:}
+		As entidades abrangidas devem adotar medidas técnicas e organizacionais adequadas e proporcionais aos riscos identificados, incluindo políticas de segurança, controlo de acessos, gestão de vulnerabilidades, continuidade de negócio, backups, encriptação e formação dos colaboradores.
+		Estas entidades abrangidas incluem setores como energia, transportes, saúde, água, serviços digitais mas também administração pública e unidades de investigação, afetando assim a Universidade de Aveiro.
+	\item \textbf{Notificação de Incidentes:}
+		A diretiva impõe obrigações rigorosas de notificação de incidentes significativos, introduzindo um modelo faseado de reporte que inclui um aviso inicial até 24h após a deteção do incidente, uma notificação mais detalhada até um máximo de 72h e depois um relatório final onde consta uma análise de impacto e lições aprendidas.
+	\item \textbf{Governação e Responsabilidade:}
+		Um dos aspetos mais relevantes da NIS2 é a responsabilização da gestão de topo. A administração das organizações passa a ter um papel ativo na supervisão da cibersegurança, podendo ser responsabilizada pessoalmente em caso de incumprimento. Há também um agravar das coimas, em caso de incumprimento.
 \end{itemize}
 
-Adicionalmente, verifica-se que o uso de dispositivos móveis aumenta a exposição ao \textit{phishing}, uma vez que o utilizador tende a clicar diretamente nos \textit{links} e não a copiá-los para um separador novo, sem analisar o endereço de destino, ao contrário do que acontece num computador em que basta dar \textit{hover} sobre o mesmo.
+\clearpage
 
-Tendo em conta os tipos de \textit{phishing} abordados na Unidade Curricular, o ataque ao qual considero estar mais vulnerável é o \textit{spear phishing}, mais especificamente o \textit{whaling}. Neste cenário, o atacante faria passar-se não pelo Reitor da UA, mas pelo meu orientador de bolsa e tese, o Professor Doutor João Paulo Barraca.
+Desta forma, ao conhecer mais a fundo a NIS2 e o que é que ela pede, desenvolvo conhecimento da área de \acrshort{grc} que se vai manter mesmo depois do prazo de implementação para o disposto no Decreto-Lei ter terminado, que são 2 anos.
 
-Um exemplo plausível seria um convite falso para uma reunião no Microsoft Teams, que é bastante comum em ambos os trabalhos desenvolvidos. Outra possibilidade seria um email relacionado com a plataforma NextCloud, utilizada para armazenamento e partilha de ficheiros no âmbito da bolsa. Neste segundo caso, o fator de urgência poderia ser explorado através da proximidade de prazos para entrega de indicadores de progresso que ocorrem mensalmente, aumentando a probabilidade de uma ação impulsiva.
+De seguida, enuncio alguns tópicos que eu tenho aprendido e outros que tenho de conhecer mais a fundo para alcançar este objetivo:
+ \begin{itemize}
+ 	\item Compliance com uma certificação, seja ela de âmbito mais nacional e direcionado para PMEs, como é o caso do \href{https://selosmaturidadedigital.incm.pt/}{Selo de Maturidade Digital} e a certificação de  serviços de cibersegurança lançado pelo CNCS \cite{cncs} ou de âmbito internacional, como é o caso da ISO27001 para a segurança da informação, a ISO20000 relativa a boas práticas nos serviços TI ou a ISO9001 para a qualidade dos processos
+ 	\item Aprender a interpretar e a tirar valor de \textit{frameworks} na área de Gestão de Risco de cibersegurança, como é o caso do CSF2.0 \cite{csf}, proposta pela NIST e que dá uma abordagem holística da aplicação da cibersegurança a toda a empresa
+ 	\item \acrfull{rgpd}, aprendido na Unidade Curricular de Direito e Organização da Segurança \cite{dos}, que faz parte do plano curricular do Mestrado em Cibersegurança
+ 	\item Cursos na \href{https://www.nau.edu.pt/pt/}{NAU}, como são os exemplos das figuras \ref{fig:CSIRT} e \ref{fig:GNS}
+ \end{itemize}
+ 
+Para além do acima mencionado, o conhecimento mais prático tem saído da aplicação na prática destes temas em conjunto com todo o tipo de entidades, sejam elas da administração pública, como escolas ou Câmaras Municipais ou PMEs dos vários setores de atividade, trabalho desenvolvido no Centro de Competências em Cibersegurança \cite{ccc} (website na figura \ref{fig:CCC}). 
 
-De seguida, apresento um mail exemplo para o primeiro caso:
+\subsection*{Evidências}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{images/Mail1}
-	\caption{Exemplo de mail de phishing 1}
-	\label{fig:mail1}
+	\includegraphics[width=0.9\linewidth]{images/NIS2}
+	\caption{Certificado de participação na formação sobre NIS2 realizada pela empresa \textit{StrongStep}}
+	\label{fig:NIS2}
 \end{figure}
 
-\vspace{-10pt}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{images/CSIRT}
+	\caption{Certificado de formação sobre funcionamento de um CSIRT}
+	\label{fig:CSIRT}
+\end{figure}
 
-Neste caso, o atacante faria-se passar pelo professor com um \textit{mail} semelhante ao legítimo \\ (jpbarracas@ua.pt), colocando em CC um mail semelhante ao do co-orientador. De resto, a complexidade estaria em replicar visualmente o convite que é enviado pelo Microsoft Teams.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{images/CCC}
+	\caption{Website do Centro de Competências em Cibersegurança da Região Centro (CCC-Centro)}
+	\label{fig:CCC}
+\end{figure}
 
-Já para o segundo caso, o \textit{mail} poderia ser da seguinte forma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{images/GNS}
+	\caption{Certificado de formação sobre a Segurança da Informação Classificada}
+	\label{fig:GNS}
+\end{figure}
 
-
-\begin{minted}[
-	baselinestretch=1.2,
-	bgcolor=LightGray,
-	fontsize=\footnotesize,
-	breaklines,
-	escapeinside=||
-	]{text}
-	De: João Barraca (mail falso semelhante ao do Exemplo1)
-	Para info@ccc-centro.pt
-	Data: 30-10-2025
-	
-	Assunto: C-Network \|| Toolkit \|| Validação de Indicadores CCC Centro \|| Outubro 2025
-	
-	Boa tarde,
-	Preciso de enviar os KPIs atualizados até amanhã. Por favor atualizem o |\underline{\textcolor{blue}{Excel}}| do NextCloud.
-	Cumprimentos,
-\end{minted}
-
-\begin{minipage}[t]{0.5\textwidth}
-	\begin{minted}[
-		baselinestretch=1.2,
-		bgcolor=LightGray,
-		fontsize=\footnotesize,
-		breaklines,
-		escapeinside=||
-		]{text}
-		
-		
-		João Paulo Barraca
-		Associate Professor
-		Cybersecurity Office
-		DETI / GCS / UNAVE / IT
-		University of Aveiro
-		tel. +351 927 036 039
-		ext. 90140
-		web. www.ua.pt/pt/p/10333322
-	\end{minted}
-\end{minipage}%
-\hfill
-\begin{minipage}[t]{0.5\textwidth}
-	\vspace{0pt}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.4\linewidth]{images/Mail2}
-		\caption{Assinatura do email}
-		\label{fig:assinatura}
-	\end{figure}
-\end{minipage}
-
-\vspace{5pt}
-
-Neste caso, para o \textit{mail} ter maior probabilidade de ser clicado por mim, deveria haver um discurso informal e bastante direto, característico do professor. Além disso, a forma como os \textit{mails} vêm assinados também é algo que costumo ter em atenção mas é fácil de fazer uma assinatura como a descrita na figura \ref{fig:assinatura}. Neste caso estou o info@ccc-centro.pt é uma \textit{mailing list} legítima pela qual eu iria receber o ataque.
-
-Assim, este trabalho evidencia que pessoas das área de cibersegurança permanecem vulneráveis a ataques de \textit{spear phishing} altamente personalizados, especialmente quando exploram relações profissionais e contextos organizacionais familiares. A análise demonstra que a replicação de comunicações legítimas, aliada à criação de urgência temporal, constitui um vetor de ataque eficaz mesmo contra utilizadores tecnicamente preparados. A consciencialização contínua e a validação crítica de todas as comunicações são, portanto, essenciais para mitigar esta ameaça persistente.
+\clearpage
 
 \begin{thebibliography}{9}
 	
-	\bibitem{daengsi2021}
-	T.~Daengsi, P.~Wuttidittachotti, P.~Pornpongtechavanich, e N.~Utakrit,
-	``A comparative study of cybersecurity awareness on phishing among employees from different departments in an organization,''
-	in \textit{Proceedings of the 2nd International Conference on Smart Computing and Electronic Enterprise (ICSCEE 2021)},
-	IEEE, 2021.
+	\bibitem{nis2}
+	União Europeia,
+	\textit{Diretiva (UE) 2022/2555 do Parlamento Europeu e do Conselho, de 14 de dezembro de 2022, relativa a medidas destinadas a garantir um elevado nível comum de cibersegurança na União (NIS2)},
+	Jornal Oficial da União Europeia.
+	Disponível em: \url{https://eur-lex.europa.eu/legal-content/PT/TXT/PDF/?uri=CELEX:32022L2555}
 	
-	\bibitem{meyers2018}
-	J.~J. Meyers, D.~L. Hansen, J.~S. Giboney, e D.~C. Rowe,
-	``Training future cybersecurity professionals in spear phishing using SiEVE,''
-	in \textit{The 19th Annual Conference on Information Technology Education (SIGITE'18)},
-	2018.
+	\bibitem{dl1252025}
+	Presidência do Conselho de Ministros,
+	\textit{Decreto-Lei n.º 125/2025, de 4 de dezembro — Regime Jurídico da Cibersegurança},
+	Diário da República, 1.ª série, n.º 234, 2025.
+	Disponível em: \url{https://diariodarepublica.pt/dr/detalhe/decreto-lei/125-2025-962603401}
+	
+	\bibitem{csf}
+	The NIST Cybersecurity Framework (CSF) 2.0.
+	Disponível em: \url{https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf}
+	
+	\bibitem{cncs}
+	Certificação Serviços de Cibersegurança
+	Disponível em: \url{https://www.cncs.gov.pt/pt/certificacao-servicos-de-ciberseguranca/}
+	
+	\bibitem{dos}
+	Direito e Organização da Segurança
+	Disponível em: \url{https://www.ua.pt/pt/uc/14826}
+	
+	\bibitem{ccc}
+	Centro de Competências em Cibersegurança
+	Disponível em: \url{https://www.ccc-centro.pt/}
 	
 \end{thebibliography}
 
